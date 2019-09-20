@@ -2,10 +2,10 @@
 
 FROM golang:alpine as builder
 
-COPY . /go/src/github.com/henry40408/concourse-ssh-resource
+COPY . /go/src/github.com/bharath0080/concourse-ssh-resource
 
 RUN apk --no-cache add make && \
-  cd /go/src/github.com/henry40408/concourse-ssh-resource && \
+  cd /go/src/github.com/bharath0080/concourse-ssh-resource && \
   make build-linux
 
 WORKDIR /opt/resource
